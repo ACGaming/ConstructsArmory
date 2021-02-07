@@ -42,6 +42,9 @@ public class ConfigHandler {
     @Config.Name("Bouncy Trait Uses Durability")
     @Config.Comment("Set to true to have the Bouncy trait use durability for each bounce")
     public static boolean bounceDurability = true;
+    @Config.Name("Ingot Value")
+    @Config.Comment("How much the different items are \"worth\", this value is used for both liquid conversion as well as part crafting")
+    public static int ingotValue = 100;
 
     public static final Leveling leveling = new Leveling();
 

@@ -19,6 +19,7 @@
 
 package c4.conarm.lib.armor;
 
+import c4.conarm.common.ConfigHandler;
 import c4.conarm.common.ConstructsRegistry;
 import c4.conarm.common.armor.utils.ArmorHelper;
 import c4.conarm.lib.ArmoryRegistry;
@@ -208,7 +209,7 @@ public abstract class ArmorCore extends TinkersArmor implements IToolStationDisp
         RecipeMatch.removeMatch(repairItems, match);
         CoreMaterialStats stats = material.getStats(ArmorMaterialType.CORE);
         float durability = stats.durability * match.amount * ConstructsRegistry.polishingKit.getCost();
-        durability /= Material.VALUE_Ingot;
+        durability /= ConfigHandler.ingotValue;
         return (int) (durability);
     }
 
