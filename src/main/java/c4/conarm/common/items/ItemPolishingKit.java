@@ -19,6 +19,7 @@
 
 package c4.conarm.common.items;
 
+import c4.conarm.common.ConfigHandler;
 import c4.conarm.lib.armor.ArmorPart;
 import c4.conarm.lib.materials.ArmorMaterialType;
 import c4.conarm.lib.materials.PlatesMaterialStats;
@@ -39,7 +40,7 @@ import java.util.List;
 public class ItemPolishingKit extends ArmorPart {
 
     public ItemPolishingKit() {
-        super(Material.VALUE_Shard * 4);
+        super(ConfigHandler.ingotValue * 2);
     }
 
     @Override
